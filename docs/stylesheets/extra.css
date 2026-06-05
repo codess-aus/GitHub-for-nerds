@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
+:root {
+  --workshop-green: #3fb950;
+  --workshop-blue: #58a6ff;
+  --workshop-purple: #a371f7;
+  --workshop-gold: #e3b341;
+  --workshop-orange: #ff9f1c;
+  --workshop-card-radius: 16px;
+}
+
+[data-md-color-scheme="workshop-dark"] {
+  --md-default-bg-color: #000000;
+  --md-default-fg-color: #ffffff;
+  --md-default-fg-color--light: #d1d5db;
+  --md-code-bg-color: #05070c;
+  --md-typeset-a-color: var(--workshop-blue);
+  --md-accent-fg-color: var(--workshop-purple);
+}
+
+[data-md-color-scheme="workshop-light"] {
+  --md-default-bg-color: #ffffff;
+  --md-default-fg-color: #000000;
+  --md-default-fg-color--light: #1f2937;
+  --md-code-bg-color: #f5f6f8;
+  --md-typeset-a-color: #0b63d8;
+  --md-accent-fg-color: #6d35d4;
+}
+
+.md-header {
+  background: linear-gradient(90deg, #111111, #1b2536);
+  border-bottom: 2px solid var(--workshop-purple);
+}
+
+[data-md-color-scheme="workshop-light"] .md-header {
+  background: linear-gradient(90deg, #ffffff, #f3f7ff);
+  border-bottom-color: var(--workshop-blue);
+}
+
+.md-main {
+  background-image: radial-gradient(circle at 10% 5%, rgba(88, 166, 255, 0.12), transparent 28%),
+    radial-gradient(circle at 85% 15%, rgba(163, 113, 247, 0.12), transparent 30%);
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  letter-spacing: 0.01em;
+  font-weight: 700;
+}
+
+.md-typeset img {
+  border-radius: var(--workshop-card-radius);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+  width: 100%;
+}
+
+[data-md-color-scheme="workshop-light"] .md-typeset img {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.14);
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 14px;
+  border-width: 1px;
+}
+
+.md-typeset a:focus,
+.md-typeset button:focus,
+.md-search__input:focus {
+  outline: 3px solid var(--workshop-gold);
+  outline-offset: 2px;
+}
+
+.md-typeset ul li,
+.md-typeset ol li {
+  margin-bottom: 0.35rem;
+}
+
+.md-nav__link--active {
+  color: var(--workshop-green);
+  font-weight: 600;
+}
+
+.md-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+[data-md-color-scheme="workshop-light"] .md-footer {
+  border-top-color: rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .md-typeset h1 {
+    font-size: 1.95rem;
+  }
+
+  .md-typeset h2 {
+    font-size: 1.45rem;
+  }
+}

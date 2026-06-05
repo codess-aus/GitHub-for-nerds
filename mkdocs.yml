@@ -1,0 +1,70 @@
+site_name: GitHub for Microsoft Nerds Workshop
+site_description: Hands-on workshop companion covering Git, PRs, Copilot, CLI, Spec-Kit, SDK, and mobile workflows.
+site_url: https://codess-aus.github.io/GitHub-for-nerds/
+repo_url: https://github.com/codess-aus/GitHub-for-nerds
+repo_name: codess-aus/GitHub-for-nerds
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: en
+  favicon: assets/0-title.png
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+  font:
+    text: Space Grotesk
+    code: JetBrains Mono
+  palette:
+    - scheme: workshop-dark
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    - scheme: workshop-light
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.snippets
+
+nav:
+  - Home: index.md
+  - Chapters:
+      - 00. Title Slide: chapters/00-title.md
+      - 01. Agenda: chapters/01-agenda.md
+      - 02. Part 1 - Big Ideas: chapters/02-big-ideas.md
+      - 03. What Is Git?: chapters/03-what-is-git.md
+      - 04. What Is a Repository?: chapters/04-what-is-a-repository.md
+      - 05. What Is a Pull Request?: chapters/05-what-is-a-pull-request.md
+      - 06. Part 2 - The Tools: chapters/06-tools.md
+      - 07. GitHub Copilot: chapters/07-github-copilot.md
+      - 08. GitHub Copilot CLI: chapters/08-github-copilot-cli.md
+      - 08.5 Awesome Copilot: chapters/085-awesome-copilot.md
+      - 09. Git-Ape: chapters/09-git-ape.md
+      - 10. GitHub Spec-Kit: chapters/10-github-spec-kit.md
+      - 11. GitHub Copilot SDK: chapters/11-github-copilot-sdk.md
+      - 12. GitHub Copilot App: chapters/12-github-copilot-app.md
+      - 13. GitHub Mobile: chapters/13-github-mobile.md
+      - 14. Part 3 - Fun Things: chapters/14-fun-things.md
+      - 15. Daily-use Magic: chapters/15-daily-use-magic.md
+      - 16. Go Build Something: chapters/16-go-build-something.md
+  - Resources: resources.md
