@@ -12,34 +12,75 @@
 [data-md-color-scheme="workshop-dark"] {
   --md-default-bg-color: #000000;
   --md-default-fg-color: #ffffff;
-  --md-default-fg-color--light: #d1d5db;
+  --md-default-fg-color--light: #ffffff;
+  --md-default-fg-color--lighter: #ffffff;
+  --md-default-fg-color--lightest: #ffffff;
+  --md-primary-fg-color: #000000;
+  --md-primary-bg-color: #ffffff;
   --md-code-bg-color: #05070c;
-  --md-typeset-a-color: var(--workshop-blue);
+  --md-typeset-a-color: #ffffff;
   --md-accent-fg-color: var(--workshop-purple);
 }
 
 [data-md-color-scheme="workshop-light"] {
   --md-default-bg-color: #ffffff;
   --md-default-fg-color: #000000;
-  --md-default-fg-color--light: #1f2937;
+  --md-default-fg-color--light: #000000;
+  --md-default-fg-color--lighter: #000000;
+  --md-default-fg-color--lightest: #000000;
+  --md-primary-fg-color: #ffffff;
+  --md-primary-bg-color: #000000;
   --md-code-bg-color: #f5f6f8;
-  --md-typeset-a-color: #0b63d8;
+  --md-typeset-a-color: #000000;
   --md-accent-fg-color: #6d35d4;
 }
 
 .md-header {
-  background: linear-gradient(90deg, #111111, #1b2536);
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
   border-bottom: 2px solid var(--workshop-purple);
 }
 
 [data-md-color-scheme="workshop-light"] .md-header {
-  background: linear-gradient(90deg, #ffffff, #f3f7ff);
+  background: var(--md-primary-fg-color);
   border-bottom-color: var(--workshop-blue);
 }
 
-.md-main {
-  background-image: radial-gradient(circle at 10% 5%, rgba(88, 166, 255, 0.12), transparent 28%),
-    radial-gradient(circle at 85% 15%, rgba(163, 113, 247, 0.12), transparent 30%);
+.md-header,
+.md-header a,
+.md-header button,
+.md-header .md-icon,
+.md-tabs,
+.md-tabs a,
+.md-nav,
+.md-nav a,
+.md-sidebar,
+.md-sidebar a,
+.md-search__icon,
+.md-search__input::placeholder {
+  color: var(--md-default-fg-color);
+}
+
+.md-search__input {
+  color: var(--md-default-fg-color);
+  background-color: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color);
+}
+
+.md-icon svg,
+.md-social__link svg,
+.md-nav__icon svg {
+  fill: currentColor;
+}
+
+[data-md-color-scheme="workshop-dark"] .md-main {
+  background-image: radial-gradient(circle at 10% 5%, rgba(255, 255, 255, 0.08), transparent 28%),
+    radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.08), transparent 30%);
+}
+
+[data-md-color-scheme="workshop-light"] .md-main {
+  background-image: radial-gradient(circle at 10% 5%, rgba(0, 0, 0, 0.06), transparent 28%),
+    radial-gradient(circle at 85% 15%, rgba(0, 0, 0, 0.06), transparent 30%);
 }
 
 .md-typeset h1,
